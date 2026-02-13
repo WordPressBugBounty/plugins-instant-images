@@ -281,6 +281,7 @@ function instant_images_api_keys_callback( $args = [] ) {
 	}
 
 	$options  = get_option( INSTANT_IMAGES_API_SETTINGS ); // API options.
+	$options = is_array( $options ) ? $options : []; // API options.
 	$key      = $provider['slug'] . '_api';
 	$title    = $provider['name'];
 	$constant = $provider['constant'];
